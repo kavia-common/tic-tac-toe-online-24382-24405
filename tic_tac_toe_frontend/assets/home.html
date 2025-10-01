@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+      Static screen: home
+      Figma reference: attachments/screen_1-49.png (id: screen_1:49)
+      Theme: Ocean Professional (primary #2563EB, secondary #F59E0B, error #EF4444, background #f9fafb, surface #ffffff, text #111827)
+
+      Notes:
+      - This is a static, semantic, responsive page intended to live under tic_tac_toe_frontend/assets.
+      - CSS at assets/styles/home.css
+      - JS at assets/scripts/home.js
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tic Tac Toe — Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/home.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" role="banner" aria-label="Application header">
+      <div class="header-inner container">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">⭕️❌</div>
+          <h1 class="app-title">Tic Tac Toe</h1>
+        </div>
+        <nav class="header-actions" aria-label="Header actions">
+          <button class="link-btn howto-top" type="button" aria-label="How to play">How to Play</button>
+        </nav>
+      </div>
+      <div class="top-accent" aria-hidden="true"></div>
+    </header>
+
+    <main id="main" class="site-main" role="main">
+      <section class="hero container" aria-label="Welcome">
+        <h2 class="hero-title">Challenge the grid</h2>
+        <p class="hero-subtitle">Play vs Computer or with a friend. Simple, fast, and fun.</p>
+      </section>
+
+      <section class="home-card container" aria-labelledby="preview-title">
+        <div class="card">
+          <header class="card-header">
+            <h3 id="preview-title" class="card-title">Board Preview</h3>
+            <p class="card-subtitle" id="status-text" aria-live="polite">Your move awaits...</p>
+          </header>
+
+          <div
+            class="board-preview"
+            role="grid"
+            aria-label="Tic Tac Toe 3 by 3 board preview"
+            aria-describedby="preview-title"
+          >
+            <!-- 9 tiles -->
+            <button class="tile" role="gridcell" aria-label="Tile 1"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 2"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 3"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 4"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 5"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 6"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 7"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 8"></button>
+            <button class="tile" role="gridcell" aria-label="Tile 9"></button>
+          </div>
+
+          <div class="actions" role="group" aria-label="Game mode selection">
+            <button class="btn btn-primary" id="btn-vs-cpu" type="button" aria-label="Play versus Computer">
+              Play vs Computer
+            </button>
+            <button class="btn btn-secondary" id="btn-vs-friend" type="button" aria-label="Play with a friend">
+              Play with Friend
+            </button>
+            <button class="btn btn-text" id="btn-howto" type="button" aria-label="Open how to play instructions">
+              How to Play
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p class="brand-note">Built with the Ocean Professional theme</p>
+        <small class="copyright">© <span id="year"></span> Tic Tac Toe Online</small>
+      </div>
+    </footer>
+
+    <script src="./scripts/home.js"></script>
+  </body>
+</html>
